@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Bienvenido a Onlyflans{% endblock %}</title>
+</head>
+<body>
+    <header style="background: red;">
+        {% block header %}header{% endblock %}
+    </header>
+    
+    <nav style="background: yellow;">
+        {% block navbar %}navbar{% endblock %}
+    </nav>
+
+    <section>
+        {% block content %}contenido{% endblock %}
+    </section>
+
+    <footer style="background: green;">
+        {% block footer %}footer{% endblock %}
+    </footer>
+</body>
+</html>
