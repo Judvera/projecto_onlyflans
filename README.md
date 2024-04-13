@@ -1,7 +1,7 @@
 # Levantando nuestro primer proyecto Django
 
-Hito 1 del modulo Desarrollo de Aplicaciones Web con Python Django - Desarrollado
-Hito 2 - Creación de un sitio web responsive con Bootstrap - En Proceso
+Hito 1 - Desarrollo de Aplicaciones Web con Python Django - Desarrollado
+Hito 2 - Creación de un sitio web responsive con Bootstrap - Desarrollado
 
 
 ## Descripción
