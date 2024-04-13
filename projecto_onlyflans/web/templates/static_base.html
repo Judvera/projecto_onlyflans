@@ -1,99 +1,96 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Judith Vera - Emilio Madrid">
-    <meta name="description" content="OnlyFlans">
-    <meta name="keywords" content="pasteles, postres">
-    <title>OnlyFlans</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Judith Vera - Emilio Madrid">
+  <meta name="description" content="OnlyFlans">
+  <meta name="keywords" content="pasteles, postres">
+  <title>OnlyFlans</title>
 
-    <!-- Bootstrap 5.3.2-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Bootstrap 5.3.2-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <!-- Fonts Google-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+  <!-- Fonts Google-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
 
-    <!--Font Awesome-->
-    <script src="https://kit.fontawesome.com/20b1772d9e.js" crossorigin="anonymous"></script>
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/20b1772d9e.js" crossorigin="anonymous"></script>
 
-    <title>{% block title %}Bienvenido a Onlyflans{% endblock %}</title>
+  <title>{% block title %}Bienvenido a Onlyflans{% endblock %}</title>
 </head>
 
 <body>
-    <header style="background: white;">
-        {% block header %}
-        <header>
-            <a class="navbar-brand" href="#">
-                <img src="{% static 'img/onlyflans_logo.png' %}" height="30px" ></a>
-          </header>
-          
+  <!-- HEADER -->
+  <header style="background: #C0392B;" class="text-center">
+    {% block header %}
+    <a class="navbar-brand" href="#">
+      <img src="{% static 'img/onlyflans_logo.png' %}" height="100px">
+    </a>
+    {% endblock %}
+  </header>
 
-        {% endblock %}
-    </header>
-    
-    <nav style="background: yellow;">
-        {% block navbar %}
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Only-Flans</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Conocenos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pasteles</a>
-                  </li>
-              
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
-        {% endblock %}
-    </nav>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg" style="background-color: #AED6F1;">
+    {% block navbar %}
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bienvenido">Bienvenido</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="acerca">Acerca</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Busca tus pasteles" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+    {% endblock %}
+  </nav>
 
-    <section>
-        {% block content %}
-        <div class="card" style="width: 18rem;">
+  <!-- CONTENIDO -->
+  <section class="pt-3" style="background-color: #FDF5E6;">
+    {% block content %}
+    <!-- <div class="card" style="width: 18rem;">
           <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
-        </div>
-        {% endblock %}
-    </section>
+        </div> -->
+    {% endblock %}
+  </section>
 
-    <footer style="background: green;">
-        {% block footer %}
-        <footer>
+  <!-- FOOTER -->
+  <footer class="text-white text-center py-3" style="background: #333333;">
+    {% block footer %}
 
-         
-          
-          <p>OnlyFlans. Todos los derechos reservados.</p>
-          
-          </footer>
-          
-        {% endblock %}
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <p style="font-size: 25px;">OnlyFlans. Todos los derechos reservados.</p>
+
+    {% endblock %}
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous">
+  </script>
 </body>
+
 </html>
