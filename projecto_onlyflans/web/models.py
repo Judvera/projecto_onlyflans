@@ -6,7 +6,7 @@ class Flan(models.Model):
     flan_uuid = models.UUIDField(default=uuid4, editable=False, unique=True, verbose_name="UUID del Flan")
     name = models.CharField(max_length=64, verbose_name="Nombre")
     description = models.TextField(verbose_name="Descripción")
-    image_url = models.URLField(verbose_name="URL de la Imagen")
+    image_url = models.ImageField(upload_to='img', verbose_name="Imagen")
     slug = models.SlugField(unique=True, verbose_name="Slug")
     is_private = models.BooleanField(default=False, verbose_name="¿Es Privado?")
 
