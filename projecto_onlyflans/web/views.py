@@ -9,3 +9,6 @@ def acerca(request):
 
 def bienvenido(request):
     return render(request, 'welcome.html', {})
+
+def contacto(request):
+    return render(request, 'contact.html', {})
