@@ -8,7 +8,33 @@ Hito 3 - Añadiendo interacción a nuestro sitio web (modelos y formularios) - D
 
 ## Captura de Imagenes - Hito 3
 
+Captura de Index con visualización de Flanes Públicos
+
 ![Captura de Index con visualización de Flanes Públicos](projecto_onlyflans/web/static/img/captura1.jpg)
+
+Captura de Bienvenido con visualizacion de Flanes Privados
+
+![Captura de Bienvenido con visualizacion de Flanes Privados](projecto_onlyflans/web/static/img/captura2.jpg)
+
+Captura Panel de Administrador con los elementos Flan
+
+![Captura Panel de Administrador con los elemenos Flan](projecto_onlyflans/web/static/img/captura5.jpg)
+
+Captura Panel de Administrador con los modelos creados (Flan y Contact Forms)
+
+![Captura Panel de Administrador con los modelos creados (Flan y Contact Forms)](projecto_onlyflans/web/static/img/captura4.jpg)
+
+Captura de Contacto con formulario
+
+![Captura de Contacto con formulario](projecto_onlyflans/web/static/img/captura3.jpg)
+
+Captura con los formularios de prueba en el Panel de Administrador
+
+![Captura con los formularios de prueba en el Panel de Administrador](projecto_onlyflans/web/static/img/captura6.jpg)
+
+Captura de formulario recibido, con los datos de correo, nombre y mensaje
+
+![Captura de formulario recibido, con los datos de correo, nombre y mensaje](projecto_onlyflans/web/static/img/captura7.jpg)
 
 ## Descripción
 
