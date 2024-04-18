@@ -4,10 +4,11 @@ Hito 1 - Desarrollo de Aplicaciones Web con Python Django - Desarrollado
 
 Hito 2 - Creación de un sitio web responsive con Bootstrap - Desarrollado
 
-Hito 3 - Añadiendo interacción a nuestro sitio web (modelos y formularios) - En proceso
+Hito 3 - Añadiendo interacción a nuestro sitio web (modelos y formularios) - Desarrollado
 
+## Captura de Imagenes - Hito 3
 
-
+![Captura de Index con visualización de Flanes Públicos](projecto_onlyflans/web/static/img/captura1.jpg)
 
 ## Descripción
 
