@@ -21,3 +21,12 @@ class Flan(models.Model):
     class Meta:
         verbose_name = "Flan"
         verbose_name_plural = "Flanes"
+
+class ContactForm(models.Model):
+    contact_form_uuid = models.UUIDField(default=uuid4, editable=False)
+    customer_email = models.EmailField()
+    customer_name = models.CharField(max_length=64)
+    message = models.TextField()
+
+    def __str__(self):
+        return f"{self.customer_name} - {self.customer_email}"

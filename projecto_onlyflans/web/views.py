@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Flan
+from .forms import ContactFormForm
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 def indice(request):
@@ -14,4 +16,14 @@ def bienvenido(request):
     return render(request, 'welcome.html', {'flanes': flanes_privados})
 
 def contacto(request):
-    return render(request, 'contact.html', {})
+    if request.method == 'POST':
+        form = ContactFormForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/exito')
+    else:
+        form = ContactFormForm()
+    return render(request, 'contact.html', {'form': form})
+
+def exito(request):
+    return render(request, 'exito.html', {})
