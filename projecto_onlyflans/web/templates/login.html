@@ -1,6 +1,79 @@
+{% extends "static_base.html" %}
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Iniciar sesión</button>
-</form>
+{% block content %}
+
+<div class="container-fluid h-custom py-4">
+    <div class="row d-flex justify-content-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5 text-center py-3">
+            <h2>Inicia Sesión</h2>
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+            <form method="post" class="container h-custom pb-5">
+                <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                    <p class="lead fw-normal mb-0 me-3">Ingresa con</p>
+                    <button type="button" data-mdb-button-init data-mdb-ripple-init
+                        class="btn btn-primary btn-floating mx-1">
+                        <i class="fa-brands fa-google fa-xl" style="color: #ffffff;"></i>
+                    </button>
+
+                    <button type="button" data-mdb-button-init data-mdb-ripple-init
+                        class="btn btn-primary btn-floating mx-1">
+                        <i class="fa-brands fa-github fa-xl"></i>
+                    </button>
+
+                    <button type="button" data-mdb-button-init data-mdb-ripple-init
+                        class="btn btn-primary btn-floating mx-1">
+                        <i class="fab fa-linkedin-in fa-xl"></i>
+                    </button>
+                </div>
+                <div class="divider d-flex align-items-center my-4">
+                    <p class="text-center fw-bold mx-3 mb-0">O si prefieres</p>
+                </div>
+                {% csrf_token %}
+                {% for field in form %}
+                    {% if field.name == 'username' %}
+                        <div class="form-outline mb-4">
+                            <input type="{{ field.field.widget.input_type }}" id="{{ field.id_for_label }}" name="{{ field.name }}" class="form-control form-control-lg" placeholder="Ingresa tu usuario" />
+                            <label for="{{ field.id_for_label }}" class="form-label"></label>
+                        </div>
+                    {% elif field.name == 'password' %}
+                        <div class="form-outline mb-4">
+                            <input type="{{ field.field.widget.input_type }}" id="{{ field.id_for_label }}" name="{{ field.name }}" class="form-control form-control-lg" placeholder="Ingresa tu contraseña" />
+                            <label for="{{ field.id_for_label }}" class="form-label"></label>
+                        </div>
+                    {% elif field.field.widget.input_type == 'checkbox' %}
+                        <div class="form-check mb-0">
+                            <input class="form-check-input me-2" type="checkbox" id="{{ field.id_for_label }}" name="{{ field.name }}" {% if field.value %}checked{% endif %} />
+                            <label class="form-check-label" for="{{ field.id_for_label }}">
+                                {{ field.label }}
+                            </label>
+                        </div>
+                    {% else %}
+                        <div class="form-outline mb-4">
+                            {{ field }}
+                            <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                <div class="d-flex justify-content-between align-items-center">
+                    <!-- Checkbox -->
+                    <div class="form-check mb-0">
+                        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                        <label class="form-check-label" for="form2Example3">
+                            Recuerdame
+                        </label>
+                    </div>
+                    <a href="#!" class="text-body">Olvidaste la clave?</a>
+                </div>
+                <div class="text-center text-lg-start my-4 py-2">
+                    <button type="submit" class="btn btn-primary btn-lg"
+                        style="padding-left: 2.5rem; padding-right: 2.5rem;">Iniciar sesión</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -38,7 +38,7 @@ def login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            next_page = request.POST.get('next', '/welcome')
+            next_page = request.POST.get('next', 'welcome')
             messages.success(request, '¡Inicio de sesión exitoso!')
             return redirect(next_page)
         else:
