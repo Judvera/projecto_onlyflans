@@ -6,9 +6,13 @@ class Flan(models.Model):
     flan_uuid = models.UUIDField(default=uuid4, editable=False, unique=True, verbose_name="UUID del Flan")
     name = models.CharField(max_length=64, verbose_name="Nombre")
     description = models.TextField(verbose_name="Descripción")
+    price = models.DecimalField(max_digits=7, decimal_places=0, verbose_name="Precio", default=0)
     image_url = models.ImageField(upload_to='img', verbose_name="Imagen")
     slug = models.SlugField(unique=True, verbose_name="Slug")
     is_private = models.BooleanField(default=False, verbose_name="¿Es Privado?")
+    
+    def formatted_price(self):
+        return f"${self.price:,.0f}".replace(",", ".")
 
     def save(self, *args, **kwargs):
         if not self.slug:
