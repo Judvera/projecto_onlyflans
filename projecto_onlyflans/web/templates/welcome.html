@@ -1,11 +1,16 @@
 {% extends "static_base.html" %}
 
 {% block content %}
+<div class="container">
+    <h1>Página de Bienvenido</h1>
 
 <div class="container-fluid h-custom">
     <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-md-9 col-lg-6 col-xl-5 text-center">
-            <h2>Bienvenido Cliente</h2>
+            <!-- <h2>Bienvenido Cliente</h2> -->
+            <div class="container">
+                <h1>Bienvenido {{ user.get_username }}</h1>
+                
             <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
                 class="img-fluid" alt="Sample image">
         </div>

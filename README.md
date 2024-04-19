@@ -6,6 +6,8 @@ Hito 2 - Creación de un sitio web responsive con Bootstrap - Desarrollado
 
 Hito 3 - Añadiendo interacción a nuestro sitio web (modelos y formularios) - Desarrollado
 
+Hito 4 - Manejando perfiles con Django - En Proceso
+
 ## Captura de Imagenes - Hito 3
 
 Captura de Index con visualización de Flanes Públicos

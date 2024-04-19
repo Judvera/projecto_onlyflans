@@ -49,22 +49,41 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Inicio</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="bienvenido">Bienvenido</a>
-          </li>
+
           <li class="nav-item">
             <a class="nav-link" href="acerca">Acerca</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="contacto">Contacto</a>
           </li>
+       
+          {% if user.is_authenticated %}  
+
+            <li class="nav-item">
+              <a class="nav-link" href="bienvenido">Bienvenido</a>
+            </li> 
+
+            <li>
+              <a class="nav-link" href="logout">Cerrar sesión</a></li>
+
+            {% else %}
+
+            <li>
+              <a class="nav-link" href="login">Iniciar sesión</a></li>
+
+            {% endif %}
         </ul>
+       
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Busca tus pasteles" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
       </div>
     </div>
+    <nav>
+      
+  </nav>
     {% endblock %}
   </nav>
 
