@@ -52,3 +52,5 @@ def logout(request):
 def welcome(request):
     return render(request, 'welcome.html')
 
+def explora(request):
+    return render(request, 'explora.html')

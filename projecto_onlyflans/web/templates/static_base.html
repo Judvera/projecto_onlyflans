@@ -51,26 +51,30 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="acerca">Acerca</a>
+            <a class="nav-link" href="/acerca">Acerca</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="contacto">Contacto</a>
+            <a class="nav-link" href="/contacto">Contacto</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/explora">Explora</a>
           </li>
        
           {% if user.is_authenticated %}  
 
             <li class="nav-item">
-              <a class="nav-link" href="bienvenido">Bienvenido</a>
+              <a class="nav-link" href="/bienvenido">Bienvenido</a>
             </li> 
 
             <li>
-              <a class="nav-link" href="logout">Cerrar sesión</a></li>
+              <a class="nav-link" href="/logout">Cerrar sesión</a></li>
 
             {% else %}
 
             <li>
-              <a class="nav-link" href="login">Iniciar sesión</a></li>
+              <a class="nav-link" href="/login">Iniciar sesión</a></li>
 
             {% endif %}
         </ul>
