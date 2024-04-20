@@ -6,7 +6,31 @@ Hito 2 - Creación de un sitio web responsive con Bootstrap - Desarrollado
 
 Hito 3 - Añadiendo interacción a nuestro sitio web (modelos y formularios) - Desarrollado
 
-Hito 4 - Manejando perfiles con Django - En Proceso
+Hito 4 - Manejando perfiles con Django - Desarrollado
+
+## Captura de Imagenes - Hito 4
+
+Captura de NavBar con Inicio de Sesión (Bienvenido y Cerrar Sesión aparecerán una vez iniciada una sesión).
+
+![Captura de NavBar con Inicio de Sesión (Bienvenido y Cerrar Sesión aparecerán una vez iniciada una sesión)](projecto_onlyflans/web/static/img/hito4-1.jpg)
+
+Captura de Bienvenida, con productos exclusivos de iniciar sesión, junto con el Cerrar Sesión en NavBar.
+
+![Captura de Bienvenida, con productos exclusivos de iniciar sesión, junto con el Cerrar Sesión en NavBar](projecto_onlyflans/web/static/img/hito4-2.jpg)
+
+Captura de Panel de Administracion, con 3 usuarios creados.
+
+![Captura de Panel de Administracion, con 3 usuarios creados](projecto_onlyflans/web/static/img/hito4-5.jpg)
+
+Captura de mejora. Nuevo atributo "price" en modelo de Flan y su visualización.
+
+![Captura de Panel de Administracion, con 3 usuarios creados](projecto_onlyflans/web/static/img/hito4-3.jpg)
+
+Captura de mejora. Nueva ruta "Explora" con enlaces e iconos ad-hoc.
+
+![Captura de Panel de Administracion, con 3 usuarios creados](projecto_onlyflans/web/static/img/hito4-4.jpg)
+
+
 
 ## Captura de Imagenes - Hito 3
 
