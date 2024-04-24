@@ -1,14 +1,21 @@
+<!-- COMANDO PARA EXTENDER CODIGO DE ARCHIVO INDICADO -->
 {% extends "static_base.html" %}
 
+<!-- APERTURA CODIGO MODIFICADO -->
 {% block content %}
-<div class="container-fluid text-center py-4" style="background-color: #333333; color: #ffffff;">
 
+<!-- HERO -->
+<div class="container-fluid text-center py-4" style="background-color: #333333; color: #ffffff;">
+    <!-- LLAMADA DE DATOS DEL USUARIO -->
     <h1>Bienvenido {{ user.first_name }} {{ user.last_name }}</h1>
     <h3>Disfruta de estos productos únicos para usuarios registrados!!</h3>
 </div>
+
+<!-- PRODUCTOS / CARDS -->
 <div class="container-fluid py-3 px-5" style="background-color: #333333;">
     <div class="row">
 
+        <!-- CICLO FOR PARA EXTRACCION DE DATOS -->
         {% for flan in flanes %}
 
         <div class="col-12 col-md-4">

@@ -1,5 +1,7 @@
+<!-- COMANDO PARA EXTENDER CODIGO DE ARCHIVO INDICADO -->
 {% extends "static_base.html" %}
 
+<!-- APERTURA CODIGO MODIFICADO -->
 {% block content %}
 
 <div class="container-fluid h-custom py-4">
@@ -10,6 +12,7 @@
                 class="img-fluid" alt="Sample image">
         </div>
         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+            <!-- FORMULARIO -->
             <form action="{% url 'contacto' %}" method="post">
                 {% csrf_token %}
                 <div class="mb-3">

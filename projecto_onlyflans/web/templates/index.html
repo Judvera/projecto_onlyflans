@@ -1,14 +1,19 @@
+<!-- COMANDO PARA EXTENDER CODIGO DE ARCHIVO INDICADO -->
 {% extends "static_base.html" %}
+<!-- COMANDO DE CARGA DE ARCHIVOS EN STATIC -->
 {% load static %}
 
+<!-- APERTURA CODIGO MODIFICADO -->
 {% block content %}
 
+<!-- HERO -->
 <div class="container py-4">
   <h1 class="text-center">Nuestros pasteles</h1>
 
   <div class="container pt-4 px-4">
     <div class="row">
-
+      <!-- PRODUCTOS / CARDS -->
+      <!-- CICLO FOR PARA EXTRACCION DE DATOS -->
       {% for flan in flanes %}
 
       <div class="col-12 col-md-4">
