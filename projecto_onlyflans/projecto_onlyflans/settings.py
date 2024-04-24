@@ -118,11 +118,23 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# Importamos libreria
 import os 
 
+# URL para acceder a los archivos multimedia del proyecto.
+# Se usará para construir la ruta de acceso a los archivos multimedia en la parte pública del sitio web.
 MEDIA_URL = 'media/'
+
+# Directorio en el sistema de archivos donde se almacenan los archivos multimedia.
+# Se construye usando el BASE_DIR para asegurarse de que la ruta sea relativa a la ubicación principal del proyecto.
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# URL a la que se redirige a los usuarios después de iniciar sesión exitosamente.
+# En este caso, los usuarios serán redirigidos a la página '/bienvenido'.
 LOGIN_REDIRECT_URL = '/bienvenido'
+
+# URL a la que se redirige a los usuarios después de cerrar sesión.
+# Aquí, se redirige a la página de inicio o raíz '/', como suele ser común en las aplicaciones web.
 LOGOUT_REDIRECT_URL = '/'
 
 # Default primary key field type

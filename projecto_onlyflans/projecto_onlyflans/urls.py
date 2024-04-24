@@ -16,12 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+# Importacion de las vistas del proyecto.
 from web.views import indice, acerca, bienvenido, contacto, exito, explora, login
+# Para acceder a las configuraciones del proyecto. (Para uso del directorio MEDIA)
 from django.conf import settings
+# Para servir archivos estáticos en desarrollo. (Para uso del directorio MEDIA)
 from django.conf.urls.static import static
+# Importa vistas predeterminadas de autenticación.
 from django.contrib.auth import views as auth_views
 
-
+# Se definen las rutas de URL para el proyecto.
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', indice, name='indice'),
@@ -30,11 +34,11 @@ urlpatterns = [
     path('contacto', contacto, name='contacto'),
     path('exito', exito, name='exito'),
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
-    #path('login/', login, name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='logout.html'), name='logout'),
     path('explora', explora, name='explora'),
 ]
 
+# Si DEBUG es TRUE, añade rutas para servir archivos multimedia estáticos.
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
    
